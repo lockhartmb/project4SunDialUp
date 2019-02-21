@@ -17,6 +17,7 @@ app.getUserTime = () => {
 // Takes number of hours and number of minutes and converts to one total number of minutes
 app.currentTotalMinutes = (hours, minutes) => {
     return (hours * 60) + minutes;
+    
 }
 
 // Takes the time and extracts the hours, then converts to EST by subtracting 5 hours, returns minutes
