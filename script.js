@@ -115,10 +115,25 @@ colorChange = () => {
 }
 
 
+const scaleTest = chroma
+    .scale(["blue", "purple"])
+    .mode("lch")
+    .colors(1000);
+
+console.log(scaleTest);
+
+scaleTest.forEach((color) => {
+    color = chroma(color).css();
+    $("main").css("background-color", color)
+    console.log(color);
+})
+
 
 
 
 
 // setInterval(function () {
-//     colorChange(app.hexValue); 
-// }, 100);
+//         $("main").css("background-color", color)
+//     }, 1000);
+
+
