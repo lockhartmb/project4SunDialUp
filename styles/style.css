@@ -150,9 +150,13 @@ main {
   width: 100vw; }
 
 main {
-  background: -webkit-linear-gradient(45deg, #74e4ee 13%, white 96%);
-  background: -o-linear-gradient(45deg, #74e4ee 13%, white 96%);
-  background: linear-gradient(45deg, #74e4ee 13%, white 96%); }
+  background: darkgrey;
+  -webkit-transition: background 4s linear;
+  -o-transition: background 4s linear;
+  transition: background 4s linear; }
+
+main:hover {
+  background: #e3743a; }
 
 section {
   min-height: 100vh; }

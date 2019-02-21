@@ -3,17 +3,25 @@ main {
     width: 100vw;
 }
 
-// main { //midnight
-//     background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(74,71,71, 1) 100%);
-// }
+main { //midnight
+    // animation: color 4s linear;
+    // background-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(74,71,71, 1) 100%);
+    background: darkgrey;
+    transition: background 4s linear;
+}
+
+main:hover {
+    // background-image: linear-gradient(to top, rgba(238,196,30,1) 0%, rgba(227,116,58,1) 50%);
+     background: rgb(227,116,58);
+}
 
 // main { //sunrise
 //     background: linear-gradient(to top, rgba(238,196,30,1) 0%, rgba(227,116,58,1) 50%);
 // }
 
-main { //noon
-    background: linear-gradient(45deg, rgba(116,228,238,1) 13%, rgba(255,255,255,1) 96%);
-}
+// main { //noon
+    // background: linear-gradient(45deg, rgba(116,228,238,1) 13%, rgba(255,255,255,1) 96%);
+// }
 
 // main { //sunset
 //     background: linear-gradient(to top, rgb(236, 183, 226) 2%, rgb(104, 62, 233) 77%);
@@ -68,3 +76,13 @@ img {
 .tree5 {
     width: 275px;
 }
+
+// @keyframes color {
+//   0% {
+//     background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(74,71,71, 1) 100%);
+//   }
+
+//   100% {
+//     background: linear-gradient(to top, rgba(238,196,30,1) 0%, rgba(227,116,58,1) 50%);
+//   }
+// }
