@@ -112,21 +112,17 @@ $(document).ready(function(){
 
 
 app.displayColors = () => {
-    // const topColors = chroma
-    //     .scale(["rgb(0,0,0)", "rgb(227,116,58)", "rgb(116, 228, 238)", "rgb(104,62,233)", "rgb(0,0,0)"])
-    //     // .mode("lch")
-    //     .domain([0, `${app.sunriseMinutes}`, `${app.noonMinutes}`, `${app.sunsetMinutes}`, 1440])
-    //     .colors(1440);
+    const topColors = chroma
+        .scale(["rgb(0,0,0)", "rgb(227,116,58)", "rgb(116, 228, 238)", "rgb(104,62,233)", "rgb(0,0,0)"])
+        // .mode("lch")
+        .domain([0, `${app.sunriseMinutes}`, `${app.noonMinutes}`, `${app.sunsetMinutes}`, 1440])
+        .colors(1440);
 
     const bottomColors = chroma
-    .scale(["rgb(74,71,71", "rgb(238,196,30", "rgb(255,255,255)", "rgb(236,183,226)", "rgb(74,71,71)"])
+    .scale(["rgb(74,71,71)", "rgb(238,196,30)", "rgb(255,255,255)", "rgb(236,183,226)", "rgb(74,71,71)"])
     // .mode("lch")
-    .domain([0, `${app.sunriseMinutes}`, `${app.noonMinutes}`, `${app.sunsetMinutes}`, 1440])
+        .domain([0, `${app.sunriseMinutes}`, `${app.noonMinutes}`, `${app.sunsetMinutes}`, 1440])
     .colors(1440);
-
-    console.log(bottomColors);
-
-
 
     const interval = 10; //this will need to be 60,000 to be real time
 
@@ -137,22 +133,22 @@ app.displayColors = () => {
             console.log(color);
         }, index * interval);
     });
-
-    console.log("LOOP FINISHED!");
 }
 
+// FROM ZOE!
 
-
-// const scaleTest2 = chroma.scale(['yellow', 'lightgreen', '008ae5']).domain([0, 0.25, 1]);
-
-// $('main').css(scaleTest2);
-
-
-
-
-
-// setInterval(function () {
-//         $("main").css("background-color", color)
-//     }, 1000);
+// const colors1 = ['red', 'orange', 'yellow', 'green']
+// const colors2 = ['pink', 'blue', 'white', 'purple']
+// const colorPairs = [];
+// colors1.map((color, i) => {
+//     console.log(color, i)
+//     let newPair = []
+//     newPair.push(color, colors2[i])
+//     console.log(newPair)
+//     colorPairs.push(newPair)
+// })
+// colorPairs.forEach(colorPair => {
+//     console.log(`linear-gradient:${colorPair[0]} ${colorPair[1]}`)
+// })
 
 
