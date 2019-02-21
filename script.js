@@ -78,7 +78,10 @@ app.sunsetUpdate = () => {
     console.log(app.sunsetMinutes);
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> edfacd3fc89a8a09af1c3907c889d2be22feea27
 
 
 
@@ -139,6 +142,10 @@ app.displayColors = () => {
 }
 
 
+
+// const scaleTest2 = chroma.scale(['yellow', 'lightgreen', '008ae5']).domain([0, 0.25, 1]);
+
+// $('main').css(scaleTest2);
 
 
 
