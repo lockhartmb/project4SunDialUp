@@ -77,7 +77,6 @@ app.sunsetUpdate = () => {
     console.log(app.sunsetMinutes);
 }
 
-app.currentTotalMinutes
 
 
 
@@ -127,6 +126,10 @@ scaleTest.forEach((color) => {
     $("main").css("background-color", color)
     console.log(color);
 })
+
+// const scaleTest2 = chroma.scale(['yellow', 'lightgreen', '008ae5']).domain([0, 0.25, 1]);
+
+// $('main').css(scaleTest2);
 
 
 
