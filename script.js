@@ -118,7 +118,7 @@ colorChange = () => {
 const scaleTest = chroma
     .scale(["blue", "purple"])
     .mode("lch")
-    .colors(1000);
+    .colors(1440);
 
 console.log(scaleTest);
 
