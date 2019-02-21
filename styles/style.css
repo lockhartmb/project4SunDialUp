@@ -148,3 +148,58 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 main {
   height: 100vh;
   width: 100vw; }
+
+main {
+  background: -webkit-linear-gradient(45deg, #74e4ee 13%, white 96%);
+  background: -o-linear-gradient(45deg, #74e4ee 13%, white 96%);
+  background: linear-gradient(45deg, #74e4ee 13%, white 96%); }
+
+section {
+  min-height: 100vh; }
+
+img {
+  width: 100%;
+  display: block; }
+
+.day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.trees {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 100%; }
+
+.house {
+  height: 300px;
+  width: 300px; }
+
+.tree1 {
+  width: 350px; }
+
+.tree2 {
+  width: 250px; }
+
+.tree3 {
+  width: 250px; }
+
+.tree4 {
+  width: 350px; }
+
+.tree5 {
+  width: 275px; }
