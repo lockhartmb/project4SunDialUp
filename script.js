@@ -124,31 +124,71 @@ app.displayColors = () => {
         .domain([0, `${app.sunriseMinutes}`, `${app.noonMinutes}`, `${app.sunsetMinutes}`, 1440])
     .colors(1440);
 
+    // const colorPairs = [];
+    // topColors.map((color, i) => {
+    //     // console.log(color, i)
+    //     let newPair = []
+    //     newPair.push(color, bottomColors[i])
+    //     // console.log(newPair)
+    //     colorPairs.push(newPair)
+    // });
+
+    // colorPairs.forEach(colorPair => {
+        // console.log(`linear-gradient: to top, ${colorPair[0]}, ${colorPair[1]}`)
+        // $("main").css("background-image", `linear-gradient: to top, ${colorPair[0]}, ${colorPair[1]}`);
+        // console.log(colorPairs);
+    // });
+
     const interval = 10; //this will need to be 60,000 to be real time
 
-    const colorTest = bottomColors.forEach((color, index) => {
-        setTimeout(function () {
+    // const colorTest = colorPairs.forEach((colorPair, index) => {
+    //     setTimeout(function () {
+    //         color = chroma(color).css();
+    //         $("main").css({
+    //             // background: `-webkit-linear-gradient(to top, ${colorPair[0]}, ${colorPair[1]})`
+    //         });
+    //         // console.log(color);
+    //     }, index * interval);
+    // });
+
+    // const colorTest = colorPairs.forEach((colorPair, index) => {
+    //     setTimeout(function () {
+    //         colorPair = chroma(colorPair).css();
+    //         $("main").css("background-color", colorPair[0]);
+    //         console.log(colorPair);
+    //     }, index * interval);
+    // });
+
+    const arrayFormat = (array) => {
+        array.forEach((color) => {
             color = chroma(color).css();
-            $("main").css("background-color", color)
-            console.log(color);
+        });
+    }
+    arrayFormat(topColors);
+    console.log(topColors);
+    arrayFormat(bottomColors);
+
+    const colorPairs = [];
+    topColors.map((color, i) => {
+        // console.log(color, i)
+        let newPair = []
+        newPair.push(color, bottomColors[i])
+        // console.log(newPair)
+        colorPairs.push(newPair)
+    })
+    colorPairs.forEach((colorPair, index) => {
+        setTimeout(function() {
+            // console.log(colorPair);
+            // console.log(`linear-gradient:${colorPair[0]} ${colorPair[1]}`)
+            // $("main").css("background-image", `linear-gradient${colorPair[0]}`);
+            $("main").css({ background: `linear-gradient(${colorPair[0]}, ${colorPair[1]})`});
         }, index * interval);
-    });
+    })
+    
+
 }
 
 // FROM ZOE!
 
 // const colors1 = ['red', 'orange', 'yellow', 'green']
 // const colors2 = ['pink', 'blue', 'white', 'purple']
-// const colorPairs = [];
-// colors1.map((color, i) => {
-//     console.log(color, i)
-//     let newPair = []
-//     newPair.push(color, colors2[i])
-//     console.log(newPair)
-//     colorPairs.push(newPair)
-// })
-// colorPairs.forEach(colorPair => {
-//     console.log(`linear-gradient:${colorPair[0]} ${colorPair[1]}`)
-// })
-
-
