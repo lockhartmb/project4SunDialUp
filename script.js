@@ -78,10 +78,6 @@ app.sunsetUpdate = () => {
     console.log(app.sunsetMinutes);
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> edfacd3fc89a8a09af1c3907c889d2be22feea27
 
 
 

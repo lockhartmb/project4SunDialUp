@@ -149,12 +149,6 @@ main {
   height: 100vh;
   width: 100vw; }
 
-main {
-  background: -webkit-gradient(linear, left bottom, left top, from(#ecb7e2), to(#683ee9));
-  background: -webkit-linear-gradient(bottom, #ecb7e2, #683ee9);
-  background: -o-linear-gradient(bottom, #ecb7e2, #683ee9);
-  background: linear-gradient(to top, #ecb7e2, #683ee9); }
-
 section {
   min-height: 100vh; }
 
