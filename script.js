@@ -58,6 +58,7 @@ app.getSunTimes = () => {
         // console.log(app.sunrise);
         app.sunriseUpdate();
         app.sunsetUpdate();
+        app.displayColors();
     });
 }
 
@@ -77,7 +78,7 @@ app.sunsetUpdate = () => {
     console.log(app.sunsetMinutes);
 }
 
-app.currentTotalMinutes
+
 
 
 
@@ -114,19 +115,30 @@ colorChange = () => {
     $("main").css("background-color", app.rgbCSS);
 }
 
+app.displayColors = () => {
+    const scaleTest = chroma
+        .scale(["rgb(0,0,0)", "rgb(227,116,58)", "rgb(116, 228, 238)", "rgb(104,62,233)", "rgb(0,0,0)"])
+        // .mode("lch")
+        .domain([0, `${app.sunriseMinutes}`, 600, 1100, 1440])
+        .colors(1440);
 
-const scaleTest = chroma
-    .scale(["blue", "purple"])
-    .mode("lch")
-    .colors(1440);
 
-console.log(scaleTest);
+    console.log(scaleTest);
 
-scaleTest.forEach((color) => {
-    color = chroma(color).css();
-    $("main").css("background-color", color)
-    console.log(color);
-})
+    const interval = 10;
+
+    const colorTest = scaleTest.forEach((color, index) => {
+        setTimeout(function () {
+            color = chroma(color).css();
+            $("main").css("background-color", color)
+            console.log(color);
+        }, index * interval);
+    });
+
+    console.log("LOOP FINISHED!");
+}
+
+
 
 
 

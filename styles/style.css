@@ -149,15 +149,6 @@ main {
   height: 100vh;
   width: 100vw; }
 
-main {
-  background: darkgrey;
-  -webkit-transition: background 4s linear;
-  -o-transition: background 4s linear;
-  transition: background 4s linear; }
-
-main:hover {
-  background: #e3743a; }
-
 section {
   min-height: 100vh; }
 
