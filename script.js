@@ -17,7 +17,7 @@ app.getUserTime = () => {
 // Takes number of hours and number of minutes and converts to one total number of minutes
 app.currentTotalMinutes = (hours, minutes) => {
     return (hours * 60) + minutes;
-    
+
 }
 
 // Takes the time and extracts the hours, then converts to EST by subtracting 5 hours, returns minutes
@@ -98,3 +98,27 @@ $(document).ready(function(){
 
 // getting today time in the day in minutes
     // console.log(newEST * 60 + timeEST[1]);
+
+
+// COLOR STUFF
+
+app.hexValue = 100000;
+
+colorChange = () => {
+    app.hexValue = app.hexValue + 1;
+    rgbArray = chroma(app.hexValue);
+    rgbObject = rgbArray._rgb;
+    app.rgbCSS = chroma(rgbObject).css();
+
+    console.log(app.rgbCSS);
+    $("main").css("background-color", app.rgbCSS);
+}
+
+
+
+
+
+
+// setInterval(function () {
+//     colorChange(app.hexValue); 
+// }, 100);
