@@ -53,11 +53,13 @@ app.getSunTimes = () => {
     }).then((sunData) => {
         app.sunrise = sunData.results.sunrise;
         app.sunset = sunData.results.sunset;
+        app.noon = sunData.results.solar_noon;
         // app.morningTwilight = sunData.results.civil_twilight_begin;
         // app.eveningTwilight = sunData.results.civil_twilight_end;
         // console.log(app.sunrise);
         app.sunriseUpdate();
         app.sunsetUpdate();
+        app.noonUpdate();
         app.displayColors();
     });
 }
@@ -78,13 +80,19 @@ app.sunsetUpdate = () => {
     console.log(app.sunsetMinutes);
 }
 
+app.noonUpdate = () => {
+    app.noonHour = app.convertToEST(app.noon);
+    app.noonMinute = app.updateMinute(app.noon);
+    app.noonMinutes = app.currentTotalMinutes(app.noonHour, app.noonMinute);
+    console.log(app.noonMinutes);
+}
+
 
 
 
 app.init = () => {
     app.getUserTime();
     app.getSunTimes();
-    app.currentTotalMinutes(4,7);
 }
 
 // doc ready
@@ -102,31 +110,27 @@ $(document).ready(function(){
 
 // COLOR STUFF
 
-app.hexValue = 100000;
-
-colorChange = () => {
-    app.hexValue = app.hexValue + 1;
-    rgbArray = chroma(app.hexValue);
-    rgbObject = rgbArray._rgb;
-    app.rgbCSS = chroma(rgbObject).css();
-
-    console.log(app.rgbCSS);
-    $("main").css("background-color", app.rgbCSS);
-}
 
 app.displayColors = () => {
-    const scaleTest = chroma
-        .scale(["rgb(0,0,0)", "rgb(227,116,58)", "rgb(116, 228, 238)", "rgb(104,62,233)", "rgb(0,0,0)"])
-        // .mode("lch")
-        .domain([0, `${app.sunriseMinutes}`, 600, 1100, 1440])
-        .colors(1440);
+    // const topColors = chroma
+    //     .scale(["rgb(0,0,0)", "rgb(227,116,58)", "rgb(116, 228, 238)", "rgb(104,62,233)", "rgb(0,0,0)"])
+    //     // .mode("lch")
+    //     .domain([0, `${app.sunriseMinutes}`, `${app.noonMinutes}`, `${app.sunsetMinutes}`, 1440])
+    //     .colors(1440);
+
+    const bottomColors = chroma
+    .scale(["rgb(74,71,71", "rgb(238,196,30", "rgb(255,255,255)", "rgb(236,183,226)", "rgb(74,71,71)"])
+    // .mode("lch")
+    .domain([0, `${app.sunriseMinutes}`, `${app.noonMinutes}`, `${app.sunsetMinutes}`, 1440])
+    .colors(1440);
+
+    console.log(bottomColors);
 
 
-    console.log(scaleTest);
 
-    const interval = 10;
+    const interval = 10; //this will need to be 60,000 to be real time
 
-    const colorTest = scaleTest.forEach((color, index) => {
+    const colorTest = bottomColors.forEach((color, index) => {
         setTimeout(function () {
             color = chroma(color).css();
             $("main").css("background-color", color)
