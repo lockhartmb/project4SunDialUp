@@ -168,6 +168,20 @@ main {
   background-image: -webkit-linear-gradient(bottom, #4a4747, black);
   background-image: -o-linear-gradient(bottom, #4a4747, black);
   background-image: linear-gradient(to top, #4a4747, black); }
+  .scene a {
+    float: right;
+    padding: 20px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 10px;
+    -webkit-transition: background-color 0.15s ease-in-out;
+    -o-transition: background-color 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out; }
+    .scene a:hover {
+      background-color: rgba(255, 255, 255, 0.75); }
   .scene .treeImage {
     position: absolute;
     bottom: 0px; }
@@ -199,3 +213,17 @@ main {
     background-color: white;
     -webkit-box-shadow: 0 0 30px 50px white;
     box-shadow: 0 0 30px 50px white; }
+  .scene .explanation {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 60%;
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+    padding: 40px;
+    /* opacity: 0; */
+    z-index: 99; }
+  .scene .visible {
+    opacity: 1; }
