@@ -48,6 +48,9 @@ img {
 .house {
     height: 300px;
     width: 300px;
+    &:hover {
+        color: white;
+    }
 }
 
 .tree1 {

@@ -189,6 +189,8 @@ img {
 .house {
   height: 300px;
   width: 300px; }
+  .house:hover {
+    color: white; }
 
 .tree1 {
   width: 350px; }
