@@ -3,28 +3,66 @@ ul {
     margin: 0;
     padding: 0;
     width: 100px;
-    float: right;
-    li {
-    }
+    align-self: flex-end;
+
     a {
         padding: 10px 10px;
         font-size: 1.5rem;
         text-align: center;
         display: block;
         color: black;
-        background-color: transparent;
+        background-color: rgba(255,255,255,0.4);
         text-decoration: none;
         border: 2px solid black;
         border-radius: 15px; 
         margin: 10px;
         width: 80px;
         transition: background-color $transition;
-        // z-index: 999;
+        
         &:hover {
             background-color: rgba(255,255,255,0.75);
         }
+
         i {
             width: 100%;
+        }
+    }
+}
+
+.explanation {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 60%;
+    max-width: 800px;
+    margin: 30px 0 0 30px;
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px;
+    display: none;
+    position: absolute;
+
+    h1 {
+        font-family: $header-font;
+        padding: 0;
+        padding-bottom: 15px;
+        margin: 0;
+    }
+
+    p {
+        font-family: $body-font;
+        font-size: 1rem;
+        padding: 0;
+        padding-bottom: 15px;
+        margin: 0;
+    }
+
+    .imageCredit {
+        font-size: 0.8rem;
+        padding-bottom: 0;
+
+        a {
+            color: inherit;
         }
     }
 }

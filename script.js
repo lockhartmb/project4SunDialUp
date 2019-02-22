@@ -110,8 +110,8 @@ app.sunPosition = () => {
     $('.sun').css({ "margin-left": `calc((${app.userMinutes} / 1440) * 100%)` });
 };
 
-// CLICK FUNCTION OF THE BUTTON
-app.clickLink = () => {
+// CLICK FUNCTION OF THE MENU BUTTONS
+app.clickMenu = () => {
     $('a.menu').on('click', function(event) {
         event.preventDefault();
 
@@ -123,13 +123,31 @@ app.clickLink = () => {
             $('a.menu').addClass('clicked');
         };
     });
+
+    $('a.realTime').on('click', function(event) {
+        event.preventDefault();
+        app.interval = 60000;
+    })
+
+    $('a.fast').on('click', function(event) {
+        event.preventDefault();
+        app.interval = 150;
+        app.loadUserTimeColors();
+    })
+    
+    $('a.realFast').on('click', function (event) {
+        event.preventDefault();
+        app.interval = 10;
+        app.loadUserTimeColors();
+    })
+
 };
 
 
 app.init = () => {
     app.getUserTime();
     app.getSunTimes();
-    app.clickLink();
+    app.clickMenu();
 }
 
 // creates the paired arrays and loops through them both to display the colors on the screen
@@ -147,7 +165,7 @@ app.createPairedArrays = (array1, array2) => {
     })
 }
 
-app.interval = 60000; //this will need to be 60,000 to be real time
+app.interval = 10; //this will need to be 60,000 to be real time
 
 app.displayColors = () => {
     app.topColors = chroma
@@ -206,7 +224,7 @@ app.loadUserTimeColors = () => {
             .colors(`${app.choppedFinalValue}`);
 
         app.choppedBottomColors = chroma
-            .scale([`${app.choppedBottomColors[0]}`, "rgb(227,116,58)", "rgb(116, 228, 238)", "rgb(104,62,233)", "rgb(0,0,0)"])
+            .scale([`${app.choppedBottomColors[0]}`, "rgb(238,196,30)", "rgb(255, 255, 255)", "rgb(236,183,226)", "rgb(74,71,71)"])
             .domain([0, `${app.choppedSunriseMinutes}`, `${app.choppedNoonMinutes}`, `${app.choppedSunsetMinutes}`, `${app.choppedFinalValue}`])
             .colors(`${app.choppedFinalValue}`);
 
@@ -221,7 +239,7 @@ app.loadUserTimeColors = () => {
             .colors(`${app.choppedFinalValue}`);
 
         app.choppedBottomColors = chroma
-            .scale([`${app.choppedBottomColors[0]}`, "rgb(116, 228, 238)", "rgb(104,62,233)", "rgb(0,0,0)"])
+            .scale([`${app.choppedBottomColors[0]}`, "rgb(255, 255, 255)", "rgb(236,183,226)", "rgb(74,71,71)"])
             .domain([0, `${app.choppedNoonMinutes}`, `${app.choppedSunsetMinutes}`, `${app.choppedFinalValue}`])
             .colors(`${app.choppedFinalValue}`);
 
@@ -236,7 +254,7 @@ app.loadUserTimeColors = () => {
             .colors(`${app.choppedFinalValue}`);
 
         app.choppedBottomColors = chroma
-            .scale([`${app.choppedBottomColors[0]}`, "rgb(104,62,233)", "rgb(0,0,0)"])
+            .scale([`${app.choppedBottomColors[0]}`, "rgb(236,183,226)", "rgb(74,71,71)"])
             .domain([0, `${app.choppedSunsetMinutes}`, `${app.choppedFinalValue}`])
             .colors(`${app.choppedFinalValue}`);
 
@@ -251,7 +269,7 @@ app.loadUserTimeColors = () => {
             .colors(`${app.choppedFinalValue}`);
 
         app.choppedBottomColors = chroma
-            .scale([`${app.choppedBottomColors[0]}`, "rgb(0,0,0)"])
+            .scale([`${app.choppedBottomColors[0]}`, "rgb(74,71,71)"])
             .domain([0, `${app.choppedFinalValue}`])
             .colors(`${app.choppedFinalValue}`);
 

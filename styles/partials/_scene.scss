@@ -1,69 +1,67 @@
 .scene {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
     margin: 0;
-    padding: 1px;
-    position: relative;
+    padding-top: 1px;
     background-image: linear-gradient(to top, rgba(74,71,71, 1), rgba(0,0,0,1));
-    // z-index: -99;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    
     .treeImage {
-        position: absolute;
         bottom: 0px;
-        // z-index: -9;
     }
     
+    .treeLine {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        // align-content: flex-end;
+    }
+
     .treeImage1 {
         width: 31%;
-        left: -14%;
+        // margin-left: -4%;
     }
     
     .treeImage2 {
         width: 23%;
-        left: -3%;
+        position: relative;
+        left: -100px;
+        // margin-left: -3%;
     }
     
     .treeImage3 {
         width: 26%;
-        left: 11%;
+        // margin-left: 11%;
     }
     
     .treeImage4 {
         width: 38%;
-        right: 0;
+        // margin-right: 0;
     }
     
     .treeImage5 {
         width: 22%;
-        right: 13%;
+        // margin-right: 13%;
     }
     
     .treeImage6 {
-        width: 18%;
-        right: 0;
+        width: 36%;
+        // margin-left: 28%;
     }
     
     .treeImage7 {
-        width: 36%;
-        left: 28%;
-    }
-    .sun {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: white;
-    box-shadow: 0 0 60px 110px white;
+        width: 18%;
     }
 
-    .explanation {
-        color: black;
-        background-color: rgba(255, 255, 255, 0.5);
-        width: 60%;
-        max-width: 800px;
-        margin: 60px auto 0 auto;
-        border: 2px solid black;
-        border-radius: 15px;
-        text-align: center;
-        padding: 40px;
-        display: none;
+    .sun {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 0 0 60px 110px white;
+        position: absolute;
     }
 }
