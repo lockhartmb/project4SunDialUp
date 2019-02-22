@@ -1,27 +1,6 @@
 main {
-    height: 100vh;
-    width: 100vw;
-}
-
-main { //midnight
     background-image: linear-gradient(to top, rgba(74,71,71, 1), rgba(0,0,0,1));
-    // background: black;
-    // transition: background 4s linear;
 }
-
-main { //sunrise
-    // background: linear-gradient(to top, rgba(238,196,30,1), rgba(227,116,58,1));
-}
-
-main { //noon
-    // background: linear-gradient(to top, rgba(116,228,238,1), rgba(255,255,255,1));
-}
-
-main { //sunset
-//     background: linear-gradient(to top, rgb(236, 183, 226), rgb(104, 62, 233));
-}
-
-
 
 section {
     min-height: 100vh;
@@ -53,33 +32,90 @@ img {
     }
 }
 
-.tree1 {
-    width: 350px;
+.scene {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-image: linear-gradient(to top, rgba(74,71,71, 1), rgba(0,0,0,1));
+    // z-index: -99;
     
+    a {
+        padding: 20px;
+        color: black;
+        background-color: rgba(255,255,255,0.5);
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 15px; 
+        margin: 10px;
+        transition: background-color $transition;
+        // z-index: 999;
+
+        &:hover {
+            background-color: rgba(255,255,255,0.75);
+        }
+    }
+
+    .treeImage {
+        position: absolute;
+        bottom: 0px;
+        // z-index: -9;
+    }
+    
+    .treeImage1 {
+        width: 31%;
+        left: -14%;
+    }
+    
+    .treeImage2 {
+        width: 23%;
+        left: -3%;
+    }
+    
+    .treeImage3 {
+        width: 26%;
+        left: 11%;
+    }
+    
+    .treeImage4 {
+        width: 38%;
+        right: 0;
+    }
+    
+    .treeImage5 {
+        width: 22%;
+        right: 13%;
+    }
+    
+    .treeImage6 {
+        width: 18%;
+        right: 0;
+    }
+    
+    .treeImage7 {
+        width: 36%;
+        left: 28%;
+    }
+    
+    .sun {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 0 0 60px 110px white;
+    }
+
+    .explanation {
+        color: black;
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 60%;
+        max-width: 800px;
+        margin: 60px auto 0 auto;
+        border: 2px solid black;
+        border-radius: 15px;
+        text-align: center;
+        padding: 40px;
+        display: none;
+    }
 }
-
-.tree2 {
-    width: 250px;
-}
-
-.tree3 {
-    width: 250px;
-}
-
-.tree4 {
-    width: 350px;
-}
-
-.tree5 {
-    width: 275px;
-}
-
-// @keyframes color {
-//   0% {
-//     background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(74,71,71, 1) 100%);
-//   }
-
-//   100% {
-//     background: linear-gradient(to top, rgba(238,196,30,1) 0%, rgba(227,116,58,1) 50%);
-//   }
-// }

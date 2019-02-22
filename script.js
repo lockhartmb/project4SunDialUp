@@ -65,6 +65,8 @@ app.getSunTimes = () => {
         app.noonUpdate();
         app.createColorArrays();
         app.loadUserTimeColors();
+        app.displayColors();
+        app.sunPosition();
     });
 }
 
@@ -100,6 +102,33 @@ app.createColorArrays = () => {
         // .mode("lch")
         .domain([0, `${app.sunriseMinutes}`, `${app.noonMinutes}`, `${app.sunsetMinutes}`, 1440])
         .colors(1440);
+// ANIMATION OF THE SUUUUUUUUUN
+
+// we want the sun position to be a percentage of the width of the screen depending on the user's time (as a percentage of the day)
+app.sunPosition = () => {
+    $('.sun').css({ "margin-left": `calc((${app.userMinutes} / 1440) * 100%)` });
+};
+
+// CLICK FUNCTION OF THE BUTTON
+app.clickLink = () => {
+    $('a').on('click', function(event) {
+        event.preventDefault();
+
+        if ($('a').hasClass('clicked')) {
+            $('.explanation').fadeOut(500);
+            $('a').removeClass('clicked');
+        } else {
+            $('.explanation').fadeIn(500);
+            $('a').addClass('clicked');
+        };
+    });
+};
+
+
+app.init = () => {
+    app.getUserTime();
+    app.getSunTimes();
+    app.clickLink();
 }
 
 // creates the paired arrays and loops through them both to display the colors on the screen
@@ -230,6 +259,4 @@ app.loadUserTimeColors = () => {
     // used to time when the full day functions should fire after the current day
     app.wait = app.choppedFinalValue * app.interval;
     setTimeout(app.fullDayColors, app.wait);
-}
-
-
+};
