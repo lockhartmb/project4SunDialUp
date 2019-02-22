@@ -102,6 +102,7 @@ app.createColorArrays = () => {
         // .mode("lch")
         .domain([0, `${app.sunriseMinutes}`, `${app.noonMinutes}`, `${app.sunsetMinutes}`, 1440])
         .colors(1440);
+}
 // ANIMATION OF THE SUUUUUUUUUN
 
 // we want the sun position to be a percentage of the width of the screen depending on the user's time (as a percentage of the day)
@@ -111,15 +112,15 @@ app.sunPosition = () => {
 
 // CLICK FUNCTION OF THE BUTTON
 app.clickLink = () => {
-    $('a').on('click', function(event) {
+    $('a.menu').on('click', function(event) {
         event.preventDefault();
 
-        if ($('a').hasClass('clicked')) {
+        if ($('a.menu').hasClass('clicked')) {
             $('.explanation').fadeOut(500);
-            $('a').removeClass('clicked');
+            $('a.menu').removeClass('clicked');
         } else {
             $('.explanation').fadeIn(500);
-            $('a').addClass('clicked');
+            $('a.menu').addClass('clicked');
         };
     });
 };

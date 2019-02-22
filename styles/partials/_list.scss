@@ -1,0 +1,30 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    float: right;
+    li {
+    }
+    a {
+        padding: 10px 10px;
+        font-size: 1.5rem;
+        text-align: center;
+        display: block;
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 15px; 
+        margin: 10px;
+        width: 80px;
+        transition: background-color $transition;
+        // z-index: 999;
+        &:hover {
+            background-color: rgba(255,255,255,0.75);
+        }
+        i {
+            width: 100%;
+        }
+    }
+}

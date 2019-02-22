@@ -5,6 +5,12 @@ img {
   width: 100%;
   display: block; }
 
+main {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#4a4747), to(black));
+  background-image: -webkit-linear-gradient(bottom, #4a4747, black);
+  background-image: -o-linear-gradient(bottom, #4a4747, black);
+  background-image: linear-gradient(to top, #4a4747, black); }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -152,72 +158,16 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   clip: rect(0 0 0);
   overflow: hidden; }
 
-main {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#4a4747), to(black));
-  background-image: -webkit-linear-gradient(bottom, #4a4747, black);
-  background-image: -o-linear-gradient(bottom, #4a4747, black);
-  background-image: linear-gradient(to top, #4a4747, black); }
-
-section {
-  min-height: 100vh; }
-
-img {
-  width: 100%;
-  display: block; }
-
-.day {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
-
-.trees {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  width: 100%; }
-
-.house {
-  height: 300px;
-  width: 300px; }
-  .house:hover {
-    color: white; }
-
 .scene {
   height: 100vh;
   width: 100vw;
   margin: 0;
-  padding: 0;
+  padding: 1px;
   position: relative;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#4a4747), to(black));
   background-image: -webkit-linear-gradient(bottom, #4a4747, black);
   background-image: -o-linear-gradient(bottom, #4a4747, black);
   background-image: linear-gradient(to top, #4a4747, black); }
-  .scene a {
-    padding: 20px;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.5);
-    text-decoration: none;
-    border: 2px solid black;
-    border-radius: 15px;
-    margin: 10px;
-    -webkit-transition: background-color 0.15s ease-in-out;
-    -o-transition: background-color 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out; }
-    .scene a:hover {
-      background-color: rgba(255, 255, 255, 0.75); }
   .scene .treeImage {
     position: absolute;
     bottom: 0px; }
@@ -260,3 +210,29 @@ img {
     text-align: center;
     padding: 40px;
     display: none; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  float: right; }
+  ul a {
+    padding: 10px 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 10px;
+    width: 80px;
+    -webkit-transition: background-color 0.15s ease-in-out;
+    -o-transition: background-color 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out; }
+    ul a:hover {
+      background-color: rgba(255, 255, 255, 0.75); }
+    ul a i {
+      width: 100%; }
