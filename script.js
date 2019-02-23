@@ -212,8 +212,6 @@ app.loadUserTimeColors = () => {
     app.choppedSunsetMinutes = app.sunsetMinutes - app.userMinutes;
 
     if (app.userMinutes <= app.sunriseMinutes) {
-        console.log("BEFORE SUNRISE");
-
         app.choppedTopColors = chroma
             .scale([`${app.choppedTopColors[0]}`, "rgb(227,116,58)", "rgb(116, 228, 238)", "rgb(104,62,233)", "rgb(0,0,0)"])
             .domain([0, `${app.choppedSunriseMinutes}`, `${app.choppedNoonMinutes}`, `${app.choppedSunsetMinutes}`, `${app.choppedFinalValue}`])
@@ -227,8 +225,6 @@ app.loadUserTimeColors = () => {
         app.createPairedArrays(app.choppedtopColors, app.choppedBottomColors);
 
     } else if (app.userMinutes <= app.noonMinutes) {
-        console.log("BEFORE NOON");
-
         app.choppedTopColors = chroma
             .scale([`${app.choppedTopColors[0]}`, "rgb(116, 228, 238)", "rgb(104,62,233)", "rgb(0,0,0)"])
             .domain([0, `${app.choppedNoonMinutes}`, `${app.choppedSunsetMinutes}`, `${app.choppedFinalValue}`])
@@ -242,8 +238,6 @@ app.loadUserTimeColors = () => {
         app.createPairedArrays(app.choppedTopColors, app.choppedBottomColors);
 
     } else if (app.userMinutes <= app.sunsetMinutes) {
-        console.log("BEFORE SUNSET");
-
         app.choppedTopColors = chroma
             .scale([`${app.choppedTopColors[0]}`, "rgb(104,62,233)", "rgb(0,0,0)"])
             .domain([0, `${app.choppedSunsetMinutes}`, `${app.choppedFinalValue}`])
@@ -257,8 +251,6 @@ app.loadUserTimeColors = () => {
         app.createPairedArrays(app.choppedTopColors, app.choppedBottomColors);
 
     } else if (app.userMinutes > app.sunsetMinutes) {
-        console.log("IT'S EVENING, YO!");
-
         app.choppedTopColors = chroma
             .scale([`${app.choppedTopColors[0]}`, "rgb(0,0,0)"])
             .domain([0, `${app.choppedFinalValue}`])

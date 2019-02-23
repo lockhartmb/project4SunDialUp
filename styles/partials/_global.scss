@@ -2,6 +2,10 @@ html {
     font-size: 125%;
 }
 
+body {
+    font-family: $bodyFont;
+}
+
 img {
     width: 100%;
     display: block;
@@ -13,6 +17,6 @@ main {
 
 .wrapper {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1600px;
     margin: 0 auto;
 }

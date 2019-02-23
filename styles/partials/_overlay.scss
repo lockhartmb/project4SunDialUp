@@ -44,3 +44,22 @@
     width: 100%;
     padding: 10px 0 20px 0;
 }
+
+@media (max-width: 750px) {
+    .overlayExplanation {
+        width: 80%;
+    }
+}
+
+@media (max-width: 550px) {
+    .overlayExplanation {
+        width: 90%;
+    }
+    .overlayList {
+        flex-direction: column;
+        align-items: center;
+        li {
+            width: 50%;
+        }
+    }
+}
