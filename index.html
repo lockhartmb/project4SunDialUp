@@ -18,74 +18,64 @@
 
 <body>
     <div class="overlay">
-        <div class="overlayExplanation">
-            <h1>Sun Dial-Up</h1>
-            <p> A reflection of the sky outside right now in Toronto, Canada. Check in again later and you'll see the sky has changed to accurately reflect the current time of day. Every minute, a different colour.</p>
-            <ul class="overlayList">
-                <li>
-                    <a href="#" class="realTime">
-                        <span class="visuallyHidden">Plays at real time speed</span>
-                        <i class="fas fa-sun"></i>
-                        <p>Real Time</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="fast">
-                        <span class="visuallyHidden">Plays 1000 times faster</span>
-                        <i class="fas fa-angle-right"></i>
-                        <p>Faster</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="realFast">
-                        <span class="visuallyHidden">Plays 6000 times faster</span>
-                        <i class="fas fa-angle-double-right"></i>
-                        <p>Fastest</p>
-                    </a>
-                </li>
-            </ul>
-            <p>Created by Ruby Bantock and Morgan Lockhart - HackerYou 2019.</p>
+        <div class="wrapper overlayFlex">
+            <div class="overlayExplanation">
+                <h1>Sun Dial-Up</h1>
+                <p> A reflection of the sky outside right now in Toronto, Canada. Check in again later and you'll see
+                    the sky has changed to accurately reflect the current time of day. Every minute, a different colour.
+                </p>
+                <p class="chooseSpeed">Choose your speed to begin:</p>
+                <ul class="overlayList">
+                    <li>
+                        <a href="#" class="realTime" title="Run the app in real time">
+                            <span class="visuallyHidden">Plays at real time speed</span>
+                            <i class="fas fa-sun"></i>
+                            <p>Real Time</p>
+                        </a>
+                        <!-- <span class="tooltiptext">Tooltip text</span> -->
+                    </li>
+                    <li>
+                        <a href="#" class="fast">
+                            <span class="visuallyHidden">Plays 1000 times faster</span>
+                            <i class="fas fa-angle-right"></i>
+                            <p>Faster</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="realFast">
+                            <span class="visuallyHidden">Plays 6000 times faster</span>
+                            <i class="fas fa-angle-double-right"></i>
+                            <p>Fastest</p>
+                        </a>
+                    </li>
+                </ul>
+                <p>Created by Ruby Bantock and Morgan Lockhart - HackerYou 2019.</p>
+            </div>
         </div>
     </div>
     <main class="scene">
-        <div class="sun"></div>
+        <div class="wrapper popupFlex">
+            <ul class="menuButton">
+                <li>
+                    <a href="#" class="menu">
+                        <span class="visuallyHidden">Opens menu</span>
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
 
-        <ul>
-            <li>
-                <a href="#" class="menu">
-                    <span class="visuallyHidden">Opens menu</span>
-                    <i class="fas fa-bars"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="realTime">
-                    <span class="visuallyHidden">Plays at real time speed</span>
-                    <i class="fas fa-sun"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="fast">
-                    <span class="visuallyHidden">Plays 1000 times faster</span>
-                    <i class="fas fa-angle-right"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="realFast">
-                    <span class="visuallyHidden">Plays 6000 times faster</span>
-                    <i class="fas fa-angle-double-right"></i>
-                </a>
-            </li>
-        </ul>
-
-        <div class="explanation">
-            <h1>Sun Dial-Up</h1>
-            <p>
-                A reflection of the sky outside right now in Toronto, Canada. Check in again later and you'll see the
-                sky has
-                changed to accurately reflect the current time of day. Every minute, a different colour.
-            </p>
-            <p>Created by Ruby Bantock and Morgan Lockhart - HackerYou 2019.</p>
-            <p class="imageCredit">Tree image created by Humberto Cesar Pornaro from Noun Project. Data sourced from <a href="https://sunrise-sunset.org/api">Sunrise Sunset API</a>.</p>
+            <div class="explanation">
+                <h1>Sun Dial-Up</h1>
+                <p>
+                    A reflection of the sky outside right now in Toronto, Canada. Check in again later and you'll see
+                    the
+                    sky has
+                    changed to accurately reflect the current time of day. Every minute, a different colour.
+                </p>
+                <p>Created by Ruby Bantock and Morgan Lockhart - HackerYou 2019.</p>
+                <p class="imageCredit">Tree image created by Humberto Cesar Pornaro from Noun Project. Data sourced from
+                    <a href="https://sunrise-sunset.org/api">Sunrise Sunset API</a>.</p>
+            </div>
         </div>
 
 

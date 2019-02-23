@@ -4,11 +4,8 @@
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 79%);
     z-index: 10;
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     li {
-        margin: 0 10px;
+        margin: 10px;
     }
     li p {
         font-size: 0.8rem;
@@ -19,14 +16,25 @@
     }
     a {
         &:hover {
-            background-color: rgba(255,255,255,0.75);
+            background-color: rgba(0,0,0, 0.8);
+            color: white;
+        }
+
+        &:focus {
+            border: 2px dotted black;
         }
     }
 }
 
+.overlayFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 .overlayExplanation {
     display: block;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .overlayList {

@@ -58,15 +58,6 @@
     .treeImage9 {
         width: 40%;
     }
-
-    .sun {
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background-color: white;
-        box-shadow: 0 0 60px 110px white;
-        position: absolute;
-    }
 }
 
 @media (max-width: 900px) {
@@ -89,3 +80,5 @@
         display: none;
     }
 }
+
+

@@ -2,13 +2,13 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 100px;
-    align-self: flex-end;
+    width: 80px;
+
     li {
         width: calc(100% / 3);
     }
+
     a {
-        padding: 10px 10px;
         font-size: 1.5rem;
         text-align: center;
         display: block;
@@ -17,12 +17,11 @@ ul {
         text-decoration: none;
         border: 2px solid black;
         border-radius: 15px; 
-        margin: 10px;
         width: 100%;
         transition: background-color $transition;
         
         &:hover {
-            background-color: rgba(255,255,255,0.75);
+
         }
 
         i {
@@ -31,18 +30,43 @@ ul {
     }
 }
 
+.menuButton {
+    li {
+        width: 100%;
+        margin: 0;
+        // padding: 15px;
+    }
+
+    a {
+        padding: 15px;
+        &:hover {
+            background-color: rgba(0,0,0, 0.8);
+            color: white;
+        }
+
+        &:focus {
+            border: 2px dotted black;
+        }
+    }
+}
+
+.popupFlex {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 30px;
+}
+
 .explanation, .overlayExplanation {
     color: black;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.6);
     width: 60%;
     max-width: 800px;
-    margin: 30px 0 0 30px;
     border: 2px solid black;
     border-radius: 15px;
     text-align: center;
     padding: 30px;
     display: none;
-    position: absolute;
 
     h1 {
         font-family: $header-font;

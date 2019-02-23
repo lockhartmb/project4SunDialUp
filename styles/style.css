@@ -11,6 +11,11 @@ main {
   background-image: -o-linear-gradient(bottom, #4a4747, black);
   background-image: linear-gradient(to top, #4a4747, black); }
 
+.wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto; }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -215,14 +220,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     margin-right: -17%; }
   .scene .treeImage9 {
     width: 40%; }
-  .scene .sun {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: white;
-    -webkit-box-shadow: 0 0 60px 110px white;
-    box-shadow: 0 0 60px 110px white;
-    position: absolute; }
 
 @media (max-width: 900px) {
   .treeImage4,
@@ -243,13 +240,10 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 100px;
-  -ms-flex-item-align: end;
-  align-self: flex-end; }
+  width: 80px; }
   ul li {
     width: calc(100% / 3); }
   ul a {
-    padding: 10px 10px;
     font-size: 1.5rem;
     text-align: center;
     display: block;
@@ -258,28 +252,48 @@ ul {
     text-decoration: none;
     border: 2px solid black;
     border-radius: 15px;
-    margin: 10px;
     width: 100%;
     -webkit-transition: background-color 0.15s ease-in-out;
     -o-transition: background-color 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out; }
-    ul a:hover {
-      background-color: rgba(255, 255, 255, 0.75); }
     ul a i {
       width: 100%; }
 
+.menuButton li {
+  width: 100%;
+  margin: 0; }
+
+.menuButton a {
+  padding: 15px; }
+  .menuButton a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white; }
+  .menuButton a:focus {
+    border: 2px dotted black; }
+
+.popupFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 30px; }
+
 .explanation, .overlayExplanation {
   color: black;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.6);
   width: 60%;
   max-width: 800px;
-  margin: 30px 0 0 30px;
   border: 2px solid black;
   border-radius: 15px;
   text-align: center;
   padding: 30px;
-  display: none;
-  position: absolute; }
+  display: none; }
   .explanation h1, .overlayExplanation h1 {
     font-family: "Rubik", sans-serif;
     padding: 0;
@@ -304,7 +318,21 @@ ul {
   background: -o-radial-gradient(circle, white 0%, black 79%);
   background: radial-gradient(circle, white 0%, black 79%);
   z-index: 10;
-  position: absolute;
+  position: absolute; }
+  .overlay li {
+    margin: 10px; }
+  .overlay li p {
+    font-size: 0.8rem;
+    text-transform: uppercase; }
+  .overlay i {
+    padding: 10px 0; }
+  .overlay a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white; }
+  .overlay a:focus {
+    border: 2px dotted black; }
+
+.overlayFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,20 +341,12 @@ ul {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
-  .overlay li {
-    margin: 0 10px; }
-  .overlay li p {
-    font-size: 0.8rem;
-    text-transform: uppercase; }
-  .overlay i {
-    padding: 10px 0; }
-  .overlay a:hover {
-    background-color: rgba(255, 255, 255, 0.75); }
+  align-items: center;
+  height: 100vh; }
 
 .overlayExplanation {
   display: block;
-  margin: 0; }
+  margin: 0 auto; }
 
 .overlayList {
   display: -webkit-box;

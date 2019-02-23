@@ -64,9 +64,8 @@ app.getSunTimes = () => {
         app.sunsetUpdate();
         app.noonUpdate();
         app.createColorArrays();
-        app.loadUserTimeColors();
+        
         app.displayColors();
-        app.sunPosition();
     });
 }
 
@@ -103,12 +102,6 @@ app.createColorArrays = () => {
         .domain([0, `${app.sunriseMinutes}`, `${app.noonMinutes}`, `${app.sunsetMinutes}`, 1440])
         .colors(1440);
 }
-// ANIMATION OF THE SUUUUUUUUUN
-
-// we want the sun position to be a percentage of the width of the screen depending on the user's time (as a percentage of the day)
-app.sunPosition = () => {
-    $('.sun').css({ "margin-left": `calc((${app.userMinutes} / 1440) * 100%)` });
-};
 
 // CLICK FUNCTION OF THE MENU BUTTONS
 app.clickMenu = () => {
@@ -127,20 +120,23 @@ app.clickMenu = () => {
     $('a.realTime').on('click', function(event) {
         event.preventDefault();
         app.interval = 60000;
+        app.loadUserTimeColors();
+        $('.overlay').fadeOut(750);
     })
 
     $('a.fast').on('click', function(event) {
         event.preventDefault();
         app.interval = 150;
         app.loadUserTimeColors();
+        $('.overlay').fadeOut(750);
     })
     
     $('a.realFast').on('click', function (event) {
         event.preventDefault();
         app.interval = 10;
         app.loadUserTimeColors();
+        $('.overlay').fadeOut(750);
     })
-
 };
 
 
