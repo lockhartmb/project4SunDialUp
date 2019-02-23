@@ -109,9 +109,11 @@ app.clickMenu = () => {
         if ($('a.menu').hasClass('clicked')) {
             $('.explanation').fadeOut(500);
             $('a.menu').removeClass('clicked');
+            $('.menuButton i').toggleClass('iconDisplay');
         } else {
             $('.explanation').fadeIn(500);
             $('a.menu').addClass('clicked');
+            $('.menuButton i').toggleClass('iconDisplay');
         };
     });
 

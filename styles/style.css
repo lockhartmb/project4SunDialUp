@@ -281,7 +281,7 @@ ul {
   .menuButton a:focus {
     border: 2px dotted black; }
 
-.menuButton .icon-display {
+.menuButton .iconDisplay {
   display: none; }
 
 .popupFlex {
