@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SUPER COOL PROJECT 4</title>
+    
+    <title>Sun Dial-Up</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -13,28 +14,21 @@
 
     <link rel="stylesheet" href="styles/style.css">
 
-    <style>
-    </style>
-
 </head>
-
 <body>
     <div class="overlay">
         <div class="wrapper overlayFlex">
             <div class="overlayExplanation">
                 <h1>Sun Dial-Up</h1>
-                <p> A reflection of the sky outside right now in Toronto, Canada. Check in again later and you'll see
-                    the sky has changed to accurately reflect the current time of day. Every minute, a different colour.
-                </p>
+                <p>A reflection of the sky outside right now in Toronto, Canada. See our sky change in real time in relation to sunrise, noon, and sunset. Every minute, a different colour. Try it faster for a more dramatic effect.</p>
                 <p class="chooseSpeed">Choose your speed to begin:</p>
                 <ul class="overlayList">
                     <li>
-                        <a href="#" class="realTime" title="Run the app in real time">
+                        <a href="#" class="realTime">
                             <span class="visuallyHidden">Plays at real time speed</span>
                             <i class="fas fa-sun"></i>
                             <p>Real Time</p>
                         </a>
-                        <!-- <span class="tooltiptext">Tooltip text</span> -->
                     </li>
                     <li>
                         <a href="#" class="fast">
@@ -51,9 +45,9 @@
                         </a>
                     </li>
                 </ul>
-                <p>Created by Ruby Bantock and Morgan Lockhart - HackerYou 2019.</p>
+                <p>Created by <a class="email" href="https://rubybantock.com">Ruby Bantock</a> and <a class="email" href="https://morganlockhart.com">Morgan Lockhart</a> - HackerYou 2019.</p>
             </div>
-        </div>
+        </div> <!-- /> end wrapper -->
     </div>
     <main class="scene">
         <div class="wrapper popupFlex">
@@ -62,25 +56,18 @@
                     <a href="#" class="menu">
                         <span class="visuallyHidden">Opens app explanation.</span>
                         <i class="fas fa-bars"></i>
+                        <span class="visuallyHidden">Closes app explanation.</span>
+                        <i class="fas fa-times icon-display"></i>
                     </a>
                 </li>
             </ul>
-
             <div class="explanation">
                 <h1>Sun Dial-Up</h1>
-                <p>
-                    A reflection of the sky outside right now in Toronto, Canada. Check in again later and you'll see
-                    the
-                    sky has
-                    changed to accurately reflect the current time of day. Every minute, a different colour.
-                </p>
-                <p>Created by Ruby Bantock and Morgan Lockhart - HackerYou 2019.</p>
-                <p class="imageCredit">Tree image created by Humberto Cesar Pornaro from Noun Project. Data sourced from
-                    <a href="https://sunrise-sunset.org/api">Sunrise Sunset API</a>.</p>
+                <p>A reflection of the sky outside right now in Toronto, Canada. See our sky change in real time in relation to sunrise, noon, and sunset. Every minute, a different colour. Refresh the page to choose another speed.</p>
+                <p>Created by <a class="email" href="https://rubybantock.com">Ruby Bantock</a> and <a class="email" href="https://morganlockhart.com">Morgan Lockhart</a> - HackerYou 2019.</p>
+                <p class="imageCredit">Tree image created by Humberto Cesar Pornaro from Noun Project. Data sourced from <a href="https://sunrise-sunset.org/api">Sunrise Sunset API</a>.</p>
             </div>
-        </div>
-
-
+        </div> <!-- /> end popupFlex wrapper -->
         <div class="treeLine">
             <img class="treeImage treeImage1" src="assets/tree1.png" alt="Black tree silhouette.">
             <img class="treeImage treeImage2" src="assets/tree1.png" alt="Black tree silhouette.">
@@ -92,13 +79,16 @@
             <img class="treeImage treeImage8" src="assets/tree1.png" alt="Black tree silhouette.">
             <img class="treeImage treeImage9" src="assets/tree1Cropped.png" alt="Black tree silhouette.">
         </div>
-
     </main>
 
+    <!-- chroma script file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.0.3/chroma.min.js"></script>
+
+    <!-- jquery script file -->
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'
         integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+    
+    <!-- custom script file -->
     <script src="script.js"></script>
 </body>
-
 </html>

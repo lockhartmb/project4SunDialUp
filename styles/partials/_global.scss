@@ -11,12 +11,14 @@ img {
     display: block;
 }
 
-main {
-    background-image: linear-gradient(to top, rgba(74,71,71, 1), rgba(0,0,0,1));
-}
-
 .wrapper {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
+}
+
+a {
+    &:visited {
+        color: inherit;
+    }
 }

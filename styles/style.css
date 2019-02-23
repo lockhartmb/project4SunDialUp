@@ -8,16 +8,13 @@ img {
   width: 100%;
   display: block; }
 
-main {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#4a4747), to(black));
-  background-image: -webkit-linear-gradient(bottom, #4a4747, black);
-  background-image: -o-linear-gradient(bottom, #4a4747, black);
-  background-image: linear-gradient(to top, #4a4747, black); }
-
 .wrapper {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto; }
+
+a:visited {
+  color: inherit; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
@@ -284,6 +281,9 @@ ul {
   .menuButton a:focus {
     border: 2px dotted black; }
 
+.menuButton .icon-display {
+  display: none; }
+
 .popupFlex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -310,7 +310,8 @@ ul {
   .explanation h1, .overlayExplanation h1 {
     padding: 0;
     padding-bottom: 15px;
-    margin: 0; }
+    margin: 0;
+    font-size: 3rem; }
   .explanation p, .overlayExplanation p {
     font-size: 1rem;
     padding: 0;
@@ -359,6 +360,10 @@ ul {
     color: white; }
   .overlay a:focus {
     border: 2px dotted black; }
+  .overlay a.email {
+    color: inherit; }
+    .overlay a.email:hover {
+      background-color: transparent; }
 
 .overlayFlex {
   display: -webkit-box;

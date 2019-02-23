@@ -24,6 +24,12 @@
             border: 2px dotted black;
         }
     }
+    a.email {
+        color: inherit;
+        &:hover {
+            background-color: transparent; 
+        }
+    }
 }
 
 .overlayFlex {
