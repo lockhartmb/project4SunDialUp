@@ -193,7 +193,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     flex-direction: row;
     -webkit-box-align: end;
     -ms-flex-align: end;
-    align-items: flex-end; }
+    align-items: flex-end;
+    overflow: hidden; }
   .scene .treeImage1 {
     width: 52%;
     margin-left: -5%; }
@@ -320,8 +321,8 @@ ul {
   .explanation .imageCredit, .overlayExplanation .imageCredit {
     font-size: 0.8rem;
     padding-bottom: 0; }
-    .explanation .imageCredit a, .overlayExplanation .imageCredit a {
-      color: inherit; }
+  .explanation a, .overlayExplanation a {
+    color: inherit; }
 
 @media (max-width: 750px) {
   .explanation {
