@@ -9,51 +9,54 @@
     justify-content: space-between;
     position: relative;
     
-    .treeImage {
-        bottom: 0px;
-    }
-    
     .treeLine {
         display: flex;
         flex-direction: row;
         align-items: flex-end;
-        // align-content: flex-end;
     }
 
     .treeImage1 {
-        width: 31%;
-        // margin-left: -4%;
+        width: 52%;
+        margin-left: -5%;
     }
     
     .treeImage2 {
-        width: 23%;
-        position: relative;
-        left: -100px;
-        // margin-left: -3%;
+        width: 33%;
+        margin-left: -10%;
     }
     
     .treeImage3 {
-        width: 26%;
-        // margin-left: 11%;
+        width: 41%;
+        margin-left: -12%;
     }
     
     .treeImage4 {
-        width: 38%;
-        // margin-right: 0;
+        width: 56%;
+        margin-left: -7%;
     }
     
     .treeImage5 {
-        width: 22%;
-        // margin-right: 13%;
+        width: 32%;
+        margin-left: -2%;
     }
     
     .treeImage6 {
-        width: 36%;
-        // margin-left: 28%;
+        width: 50%;
+        margin-left: -24%;
     }
     
     .treeImage7 {
-        width: 18%;
+        width: 33%;
+        margin-left: -5%;
+    }
+    
+    .treeImage8 {
+        width: 38%;
+        margin-right: -17%;
+    }
+    
+    .treeImage9 {
+        width: 40%;
     }
 
     .sun {
@@ -63,5 +66,26 @@
         background-color: white;
         box-shadow: 0 0 60px 110px white;
         position: absolute;
+    }
+}
+
+@media (max-width: 900px) {
+    .treeImage4,
+    .treeImage5 {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .treeImage2,
+    .treeImage6 {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .treeImage3,
+    .treeImage7 {
+        display: none;
     }
 }
