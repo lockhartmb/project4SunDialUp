@@ -342,8 +342,8 @@ ul {
     margin-top: 40px; } }
 
 .overlay {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   background: -webkit-radial-gradient(circle, white 0%, black 79%);
   background: -o-radial-gradient(circle, white 0%, black 79%);
   background: radial-gradient(circle, white 0%, black 79%);
@@ -376,11 +376,11 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100vh; }
+  min-height: 100vh; }
 
 .overlayExplanation {
   display: block;
-  margin: 0 auto; }
+  margin: 20px auto; }
 
 .overlayList {
   display: -webkit-box;
